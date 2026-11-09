@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* ===== OPPORTUNITY HUB LANDING PAGE ===== */
+
+.landing-page {
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 10% 15%, #ffe1d5 0, transparent 30%),
+    radial-gradient(circle at 90% 80%, #ffdee7 0, transparent 30%),
+    linear-gradient(135deg, #fff8f5, #fff1f0 50%, #fff6f7);
+  color: #442d3a;
+  font-family: 'DM Sans', sans-serif;
+  overflow: hidden;
+}
+
+/* NAVIGATION BAR */
+
+.landing-navbar {
+  position: relative;
+  z-index: 2;
+  padding: 20px 7%;
+  background: rgba(255, 255, 255, 0.88);
+  border-bottom: 1px solid #f6dce1;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 5px 25px rgba(190, 92, 105, 0.05);
+}
+
+.landing-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: #442d3a;
+  text-decoration: none;
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  transition: transform 0.2s ease;
+}
+
+.landing-brand:hover {
+  transform: translateY(-2px);
+}
+
+.landing-logo {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #ff9b69, #f06475);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(240, 100, 117, 0.25);
+}
+
+.landing-dot {
+  color: #f07869;
+  margin-left: -10px;
+}
+
+/* MAIN CONTENT */
+
+.landing-main {
+  width: min(1050px, 90%);
+  margin: 0 auto;
+  padding: 75px 0 30px;
+}
+
+/* HERO HEADING */
+
+.landing-heading {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: landingFadeIn 0.7s ease;
+}
+
+.landing-badge {
+  display: inline-block;
+  padding: 10px 19px;
+  border: 1px solid #ffd8cf;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #fff0e8, #ffeaf0);
+  color: #d96d57;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.landing-heading h1 {
+  margin: 22px 0 15px;
+  color: #442d3a;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(34px, 5vw, 53px);
+  font-weight: 800;
+  line-height: 1.2;
+  letter-spacing: -1.8px;
+}
+
+.landing-heading p {
+  max-width: 620px;
+  margin: 0 auto;
+  color: #967b88;
+  font-size: 16px;
+  line-height: 1.9;
+}
+
+/* SELECTION CARDS */
+
+.landing-cards {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.landing-card {
+  position: relative;
+  padding: 35px;
+  background: rgba(255, 255, 255, 0.95);
+  border: 1px solid #f6dce1;
+  border-radius: 22px;
+  box-shadow: 0 15px 40px rgba(190, 92, 105, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.landing-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, #ffad72, #f06475);
+}
+
+.landing-card:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 22px 50px rgba(190, 92, 105, 0.15);
+}
+
+/* CARD ICONS */
+
+.landing-card-icon {
+  display: grid;
+  place-items: center;
+  width: 65px;
+  height: 65px;
+  margin-bottom: 23px;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #fff0e5, #ffe5e9);
+  font-size: 30px;
+  box-shadow: 0 7px 18px rgba(240, 120, 105, 0.10);
+}
+
+.admin-card .landing-card-icon {
+  background: linear-gradient(135deg, #ffe5e9, #fff0e5);
+}
+
+/* CARD TEXT */
+
+.landing-card h2 {
+  margin: 0 0 13px;
+  color: #442d3a;
+  font-family: 'Manrope', sans-serif;
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: -0.6px;
+}
+
+.landing-card p {
+  min-height: 75px;
+  margin: 0 0 25px;
+  color: #967b88;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+/* BUTTONS */
+
+.landing-button {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 12px;
+  padding: 14px 16px;
+  border: 1px solid transparent;
+  border-radius: 11px;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  transition: transform 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.landing-button:hover {
+  transform: translateY(-3px);
+}
+
+/* USER BUTTONS */
+
+.user-button {
+  background: linear-gradient(135deg, #ff9b69, #f06475);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(240, 100, 117, 0.20);
+}
+
+.user-button:hover {
+  background: linear-gradient(135deg, #f48658, #e64d69);
+  box-shadow: 0 10px 22px rgba(240, 100, 117, 0.28);
+}
+
+.user-outline {
+  border-color: #f4b7ae;
+  color: #d96d57;
+  background: #fffaf8;
+}
+
+.user-outline:hover {
+  background: #fff0e8;
+}
+
+/* ADMIN BUTTONS */
+
+.admin-button {
+  background: linear-gradient(135deg, #f17c75, #db6489);
+  color: #ffffff;
+  box-shadow: 0 6px 16px rgba(219, 100, 137, 0.20);
+}
+
+.admin-button:hover {
+  background: linear-gradient(135deg, #e96768, #ce4e78);
+  box-shadow: 0 10px 22px rgba(219, 100, 137, 0.28);
+}
+
+.admin-outline {
+  border-color: #efbdc9;
+  color: #ce6480;
+  background: #fff9fb;
+}
+
+.admin-outline:hover {
+  background: #fff0f3;
+}
+
+/* FOOTER */
+
+.landing-footer {
+  margin-top: 55px;
+  padding: 30px 15px;
+  text-align: center;
+  border-top: 1px solid #f6dce1;
+}
+
+.landing-footer h3 {
+  margin-bottom: 8px;
+  color: #442d3a;
+  font-family: 'Manrope', sans-serif;
+  font-size: 19px;
+  font-weight: 800;
+}
+
+.landing-footer p {
+  color: #a48b96;
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+/* ANIMATION */
+
+@keyframes landingFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* TABLET RESPONSIVE */
+
+@media (max-width: 800px) {
+  .landing-main {
+    padding-top: 55px;
+  }
+
+  .landing-card {
+    padding: 27px;
+  }
+
+  .landing-heading h1 {
+    font-size: 38px;
+  }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 650px) {
+  .landing-navbar {
+    padding: 16px 5%;
+  }
+
+  .landing-brand {
+    font-size: 20px;
+  }
+
+  .landing-logo {
+    width: 38px;
+    height: 38px;
+  }
+
+  .landing-main {
+    width: 90%;
+    padding-top: 42px;
+  }
+
+  .landing-heading {
+    margin-bottom: 35px;
+  }
+
+  .landing-heading h1 {
+    font-size: 32px;
+    letter-spacing: -1px;
+  }
+
+  .landing-heading p {
+    font-size: 14px;
+  }
+
+  .landing-cards {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .landing-card {
+    padding: 25px;
+    border-radius: 17px;
+  }
+
+  .landing-card h2 {
+    font-size: 21px;
+  }
+
+  .landing-card p {
+    min-height: auto;
+    font-size: 14px;
+  }
+
+  .landing-footer {
+    margin-top: 35px;
+  }
+}

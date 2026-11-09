@@ -1,0 +1,470 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* MAIN ADMIN PAGE */
+
+.admin-page {
+  min-height: 100vh;
+  background: #fff7f5;
+  color: #442d3a;
+  font-family: 'DM Sans', sans-serif;
+}
+
+/* HEADER */
+
+.admin-header {
+  min-height: 76px;
+  padding: 16px 6%;
+  background: #ffffff;
+  border-bottom: 1px solid #f6dce1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  box-shadow: 0 4px 18px rgba(190, 92, 105, 0.05);
+}
+
+.admin-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: #442d3a;
+  font-family: 'Manrope', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.7px;
+  text-decoration: none;
+}
+
+.admin-brand-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #ff9b69, #f06475);
+  color: white;
+  box-shadow: 0 5px 15px rgba(240, 100, 117, 0.25);
+}
+
+.admin-brand-dot {
+  color: #f07869;
+  margin-left: -9px;
+}
+
+.admin-home-link {
+  color: #ed755e;
+  font-weight: 700;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.admin-home-link:hover {
+  color: #d84c65;
+}
+
+/* DASHBOARD CONTAINER */
+
+.admin-container {
+  width: min(1180px, 92%);
+  margin: 0 auto;
+  padding: 42px 0;
+}
+
+/* WELCOME SECTION */
+
+.admin-welcome {
+  margin-bottom: 28px;
+}
+
+.admin-eyebrow {
+  color: #e87961;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.8px;
+  text-transform: uppercase;
+}
+
+.admin-welcome h1 {
+  margin: 10px 0;
+  color: #442d3a;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(30px, 5vw, 42px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.admin-welcome p,
+.admin-panel-heading p {
+  color: #967b88;
+  line-height: 1.7;
+}
+
+/* STATISTICS */
+
+.admin-stats {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-bottom: 26px;
+}
+
+.admin-stat-card,
+.admin-panel {
+  background: #ffffff;
+  border: 1px solid #f6dce1;
+  border-radius: 17px;
+  box-shadow: 0 6px 25px rgba(190, 92, 105, 0.06);
+}
+
+.admin-stat-card {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #ffad72, #f2768d);
+}
+
+.admin-stat-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 13px 30px rgba(220, 110, 115, 0.13);
+}
+
+.admin-stat-card span {
+  color: #967b88;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.admin-stat-card strong {
+  color: #e96e65;
+  font-family: 'Manrope', sans-serif;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+/* ADMIN PANELS */
+
+.admin-panel {
+  padding: 28px;
+  margin-bottom: 26px;
+  min-width: 0;
+  transition: box-shadow 0.2s ease;
+}
+
+.admin-panel:hover {
+  box-shadow: 0 10px 32px rgba(190, 92, 105, 0.09);
+}
+
+.admin-panel-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.admin-panel-heading h2 {
+  margin: 0 0 7px;
+  color: #442d3a;
+  font-family: 'Manrope', sans-serif;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.admin-panel-heading p {
+  margin: 0;
+  font-size: 14px;
+}
+
+/* ADMIN FORMS */
+
+.admin-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.admin-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  color: #684b59;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.admin-form input,
+.admin-form select,
+.admin-form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 13px 14px;
+  border: 1px solid #f0d8de;
+  border-radius: 10px;
+  background: #fffafa;
+  color: #442d3a;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: all 0.2s ease;
+}
+
+.admin-form input::placeholder,
+.admin-form textarea::placeholder {
+  color: #c1aab2;
+}
+
+.admin-form input:focus,
+.admin-form select:focus,
+.admin-form textarea:focus {
+  outline: none;
+  border-color: #f07869;
+  background: #ffffff;
+  box-shadow: 0 0 0 4px rgba(240, 120, 105, 0.12);
+}
+
+.admin-form textarea {
+  resize: vertical;
+  line-height: 1.7;
+}
+
+.admin-full-width {
+  grid-column: 1 / -1;
+}
+
+/* FORM BUTTONS */
+
+.admin-form-actions,
+.admin-row-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.admin-submit-button,
+.admin-cancel-button,
+.admin-edit-button,
+.admin-delete-button {
+  border: 0;
+  border-radius: 9px;
+  padding: 12px 17px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.admin-submit-button {
+  background: linear-gradient(135deg, #ff9b69, #f06475);
+  color: #ffffff;
+  box-shadow: 0 5px 14px rgba(240, 100, 117, 0.20);
+}
+
+.admin-submit-button:hover {
+  background: linear-gradient(135deg, #f48658, #e64d69);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(240, 100, 117, 0.25);
+}
+
+.admin-submit-button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+  transform: none;
+}
+
+.admin-cancel-button {
+  background: #fff0ed;
+  color: #a65d55;
+}
+
+.admin-cancel-button:hover {
+  background: #ffe2dc;
+}
+
+.admin-edit-button {
+  background: #fff0e5;
+  color: #d97735;
+}
+
+.admin-edit-button:hover {
+  background: #ffe2cd;
+  transform: translateY(-1px);
+}
+
+.admin-delete-button {
+  background: #fff0f2;
+  color: #d94f69;
+}
+
+.admin-delete-button:hover {
+  background: #ffdde3;
+  transform: translateY(-1px);
+}
+
+/* SUCCESS AND ERROR MESSAGES */
+
+.admin-success,
+.admin-error {
+  padding: 13px 15px;
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 0 0 18px;
+  font-weight: 600;
+}
+
+.admin-success {
+  background: #e5f8ed;
+  color: #23764a;
+  border: 1px solid #c6ebd4;
+}
+
+.admin-error {
+  background: #fff0f2;
+  color: #c33e57;
+  border: 1px solid #ffd3db;
+}
+
+/* TABLE */
+
+.admin-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  border-radius: 12px;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: 14px;
+  background: #ffffff;
+}
+
+.admin-table th,
+.admin-table td {
+  padding: 15px 12px;
+  border-bottom: 1px solid #f5e6e9;
+  vertical-align: middle;
+}
+
+.admin-table th {
+  background: #fff1ef;
+  color: #a45f65;
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+}
+
+.admin-table td {
+  color: #705565;
+}
+
+.admin-table tbody tr {
+  transition: background 0.2s ease;
+}
+
+.admin-table tbody tr:hover {
+  background: #fff8f5;
+}
+
+.admin-table td:first-child {
+  font-weight: 700;
+  color: #442d3a;
+}
+
+/* APPLICATION TABLE */
+
+.applications-table {
+  min-width: 1000px;
+}
+
+.applications-table th,
+.applications-table td {
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.applications-table a {
+  color: #e87961;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.applications-table a:hover {
+  color: #d84c65;
+  text-decoration: underline;
+}
+
+/* FOOTER */
+
+.admin-footer {
+  padding: 26px;
+  text-align: center;
+  color: #a48b96;
+  font-size: 13px;
+  background: #ffffff;
+  border-top: 1px solid #f6dce1;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 700px) {
+  .admin-container {
+    padding-top: 28px;
+  }
+
+  .admin-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-form {
+    grid-template-columns: 1fr;
+  }
+
+  .admin-full-width {
+    grid-column: auto;
+  }
+
+  .admin-panel {
+    padding: 18px;
+  }
+
+  .admin-panel-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .admin-header {
+    padding: 14px 4%;
+  }
+
+  .admin-brand {
+    font-size: 18px;
+  }
+
+  .admin-welcome h1 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .applications-table {
+    min-width: 1000px;
+  }
+}
